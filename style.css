@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+   <head>
+     <title>
+         Miggy Fajardo
+     </title>
+   <style>
+        h1 {
+         font-size:70px;
+         text-align:center;
+		 font-family: Lucida Calligraphy;
+         color:white;
+         }      
+		h1.black {
+		 border-style: solid;
+		 border-width: 15px;
+		 padding: 20px
+		}
+        h2 {
+         font-size:60px;
+         text-align:left;
+		 font-family: Angsana New;
+		 margin:10px;
+         color: white;
+         }
+		 p {
+		 font-size: 33px;
+		 text-align:left;
+		 font-family: Angsana New;
+		 margin:10px;
+		 color:white;
+		 }
+		 ul {
+		 font-size: 30px;
+		 text-align:left;
+		 font-family: Angsana New;
+		 margin:10px;
+		 color:white;
+		 }		 
+		 a:hover {
+		 color: white;
+		}
+		a {
+		 color: grey;
+		}
+		img {
+		 border-radius: 50%;
+		 margin: 5px;
+		}
+		.gallery {
+		 margin: 10px;
+		 align: center;
+		 border: 1px solid #ddd;
+		 border-radius: 4px;
+		 padding: 5px;
+		 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		}
+		
+         body {
+          background-image: url("https://raw.githubusercontent.com/PerryHighCS/MiggyFajardo/master/Black.jpg");
+		   background-size: cover;
+         }
+		 
+</style>
+</head>
+</html>
