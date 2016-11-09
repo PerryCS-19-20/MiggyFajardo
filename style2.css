@@ -37,7 +37,7 @@ p {
 .headerContent {
     width: 1024px;
     height: auto;
-    margin: 0 auto;
+    margin: auto;
 }
 .headerContent a img {
     width: 800px;
@@ -82,3 +82,10 @@ p {
     border-bottom: 4px solid black;
 }
 /*--------NAVIGATION BAR-----------*/
+/*--------Gallery Page -----------*/
+		.gallery {
+		 margin: 45px;
+		 border-radius: 15px;
+		 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		}
+
