@@ -88,4 +88,27 @@ p {
 		 border-radius: 15px;
 		 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 		}
+/*--------404-----------*/
+h1.wrong {
+font-size: 200px;
+color: white;
+text-align: center;
+}
+h2.wrong2 {
+font-size: 50px;
+color: white;
+text-align: center;
+}
+ a:hover {
+ color: white;
+}
+a {
+ color: red;
+}
+body.background {
+background-image:url("https://raw.githubusercontent.com/PerryHighCS/MiggyFajardo/master/Pictures/blackhole.jpg");
+background-size: 100% 150%;
+background-repeat: no-repeat;
+}
+		
 
