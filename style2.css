@@ -89,25 +89,54 @@ p {
 		 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 		}
 /*--------404-----------*/
-h1.wrong {
-font-size: 200px;
-color: white;
-text-align: center;
-}
 h2.wrong2 {
-font-size: 50px;
-color: white;
-text-align: center;
+	font-size: 30px;
+	color: #f37291;
+	text-align: center;
+	margin-top: 500px ;
+	display: block;
 }
- a:hover {
- color: white;
+ 
+
+body.background {
+	background-image:url("https://raw.githubusercontent.com/PerryHighCS/MiggyFajardo/master/Pictures/404.gif");
+	background-color: #ededed;
+	background-repeat: no-repeat;
+	margin-top:300px;
+	background-position: center; 
 }
 a {
- color: red;
+	text-decoration:none;
 }
-body.background {
-background-image:url("https://raw.githubusercontent.com/PerryHighCS/MiggyFajardo/master/Pictures/404.gif");
-background-repeat: no-repeat;
+.button {
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+	font-weight: bold;
+    font-size: 25px;
+    margin: 4px 2px;
+    transition-duration: 0.3s;
+    cursor: pointer;
+	display: block;
+	margin: auto;
+}
+
+.button5 {
+    background-color: #ededed;
+    color: #f37291;
+    border: 2px solid #f37291;
+	display: block;
+	margin: auto;
+	border-radius: 8px;
+}
+
+.button5:hover {
+    background-color: #f37291;
+    color: white;
+	display: block;
+	margin: auto;
 }
 		
-
