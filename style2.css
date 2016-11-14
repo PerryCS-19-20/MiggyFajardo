@@ -115,28 +115,29 @@ a {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-	font-weight: bold;
+    font-weight: bold;
     font-size: 25px;
     margin: 4px 2px;
     transition-duration: 0.3s;
     cursor: pointer;
-	display: block;
-	margin: auto;
+    display: block;
+    margin: auto;
 }
 
 .button5 {
     background-color: #ededed;
     color: #f37291;
     border: 2px solid #f37291;
-	display: block;
-	margin: auto;
-	border-radius: 8px;
+    display: block;
+    margin: auto;
+    border-radius: 8px;
 }
 
 .button5:hover {
     background-color: #f37291;
     color: white;
-	display: block;
-	margin: auto;
+    display: block;
+    margin: auto;
 }
 		
+
