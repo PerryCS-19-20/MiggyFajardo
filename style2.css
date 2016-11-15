@@ -47,8 +47,7 @@ p {
 }
 .nav {
     margin-top: 25px;
-    height: 41px;
-	
+    height: 41px;	
     background: white;
 }
 .nav ul {
@@ -68,6 +67,8 @@ p {
 }
 .nav ul li a:hover {
     background-color: grey;
+	transition-duration: 0.3s;
+	cursor: pointer;
 }
 .nav ul  li a .active {
 	background-color: #91E6D6;
@@ -139,5 +140,26 @@ a {
     display: block;
     margin: auto;
 }
-		
+/*--------CodeHS-----------*/	
+
+canvas.codehs-editor-canvas	{
+	
+    display: block;
+    margin: auto;
+}
+/*--------Events-----------*/	
+body.colors {
+	text-align: center;
+	padding: 50px;
+	margin: 20px;
+	
+}
+h1.colors {
+	font-size:35px;
+	background-color: #ededed;
+    color: black;
+    border: 1px solid #black;
+    border-radius: 8px;
+
+}
 
