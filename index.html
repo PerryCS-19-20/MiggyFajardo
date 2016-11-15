@@ -5,6 +5,13 @@
          Home
      </title>
 	 <link rel="stylesheet" type="text/css" href="style2.css"> 
+	 	<script>
+			function testHTML() {
+				var userInput = document.getElementById("userInput");
+				var theSpan = document.getElementById("s1");
+				theSpan.innerHTML = userInput.value;		   
+			}
+		</script>
 </head>
 
 	 <body>
@@ -29,5 +36,11 @@
         <div class="headerBreak"></div>
     </div>
 	<h2> Miguel Fajardo's Web Page </h2>
+	
+		<textarea rows="10" cols="80" id="userInput" class="box">Write your text here.</textarea>
+		<br>
+		<span id="s1" class="output">Output Text</span>
+		<button class="button button5" onclick="testHTML();">Click</button>
+		
 </body>
 </html>
