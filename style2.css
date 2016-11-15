@@ -92,12 +92,11 @@ p {
 /*--------404-----------*/
 h2.wrong2 {
 	font-size: 30px;
-	color: #f37291;
+	color: #858585;
 	text-align: center;
 	margin-top: 500px ;
 	display: block;
 }
- 
 
 body.background {
 	background-image:url("https://raw.githubusercontent.com/PerryHighCS/MiggyFajardo/master/Pictures/404.gif");
