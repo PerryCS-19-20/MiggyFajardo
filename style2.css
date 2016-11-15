@@ -92,7 +92,7 @@ p {
 /*--------404-----------*/
 h2.wrong2 {
 	font-size: 30px;
-	color: #858585;
+	color: #444444;
 	text-align: center;
 	margin-top: 500px ;
 	display: block;
@@ -127,15 +127,15 @@ a {
 
 .button5 {
     background-color: #ededed;
-    color: #858585;
-    border: 2px solid #858585;
+    color: #444444;
+    border: 2px solid #444444;
     display: block;
     margin: auto;
     border-radius: 8px;
 }
 
 .button5:hover {
-    background-color: #858585;
+    background-color: #444444;
     color: white;
     display: block;
     margin: auto;
