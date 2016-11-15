@@ -148,18 +148,17 @@ canvas.codehs-editor-canvas	{
     margin: auto;
 }
 /*--------Events-----------*/	
-body.colors {
-	text-align: center;
-	padding: 50px;
-	margin: 20px;
-	
-}
 h1.colors {
+	text-align: center;	
 	font-size:35px;
 	background-color: #ededed;
     color: black;
     border: 1px solid #black;
     border-radius: 8px;
 
+}
+h1.title {
+	text-align: center;
+	font-size: 50px;
 }
 
