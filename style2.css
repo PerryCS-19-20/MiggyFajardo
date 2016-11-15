@@ -127,15 +127,15 @@ a {
 
 .button5 {
     background-color: #ededed;
-    color: #f37291;
-    border: 2px solid #f37291;
+    color: #858585;
+    border: 2px solid #858585;
     display: block;
     margin: auto;
     border-radius: 8px;
 }
 
 .button5:hover {
-    background-color: #f37291;
+    background-color: #858585;
     color: white;
     display: block;
     margin: auto;
