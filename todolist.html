@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title>
+         Home
+     </title>
+	 <link rel="stylesheet" type="text/css" href="style2.css"> 
+	 	<script>
+			function testHTML() {
+				var userInput = document.getElementById("userInput");
+				var theSpan = document.getElementById("s1");
+				theSpan.innerHTML = userInput.value;		   
+			}
+		</script>
+</head>
+
+	 <body>
+             <h2> Javascript Text Input </h2>
+	
+		<textarea rows="10" cols="80" id="userInput" class="box">Write your text here.</textarea>
+	<br>
+                <p><span id="s1" style="text-align:center";>Output Text</span></p>
+		<button class="button button5" onclick="testHTML();">Click</button>
+                
+                <ul>
+                    
+                    
+                </ul>
+</body>
+</html>
