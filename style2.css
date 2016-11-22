@@ -211,27 +211,32 @@ canvas.codehs-editor-canvas	{
 }
 /*--------Events-----------*/	
 h1.colors {
-	text-align: center;	
-	font-size:35px;
-	background-color: #ededed;
+    text-align: center;	
+    font-size:35px;
+    background-color: #ededed;
     color: black;
     border: 1px solid #black;
     border-radius: 8px;
 
 }
 h1.title {
-	text-align: center;
-	font-size: 50px;
+    text-align: center;
+    font-size: 70px;
 }
 /*--------Input-----------*/
 .box{
-	font-size: 18px;
+    font-size: 18px;
     display: block;
     margin: auto;
-	padding: 16px 32px;
+    padding: 16px 32px;
 }
 span{
     font-size: 40px;
     text-align: center;
+}
+ol#spanModifyChalkboard{
+    font-size: 40px;
+    text-align: center;
+    margin: 50px;
 }
 
