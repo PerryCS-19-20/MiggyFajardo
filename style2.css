@@ -1,6 +1,6 @@
 body {
         margin: 0;
-		background-color: grey;
+    background-color: grey;
         font-weight: bold;
         font-size:27px;
         font-family:Calibri Light;
@@ -9,9 +9,9 @@ h1 {
    	margin: 10px;
 	padding: 30px;
 	text-align: center;
-    display: block; 
-    font-size: 70px;
-    font-family:Gabriola;
+        display: block; 
+        font-size: 80px;
+        font-family:Gabriola;
 }
 h2 {
 	margin: 10px;
@@ -238,5 +238,21 @@ ol#spanModifyChalkboard{
     font-size: 40px;
     text-align: center;
     margin: 50px;
+}
+/*------Tic Tac Toe ------*/
+table {
+    border-collapse: collapse ;
+    border-spacing:15px;
+}
+ table, tr, td{
+    border: 1px solid white;
+    margin: auto;
+    text-align: center;                
+    margin-bottom: 200px;
+    font-size:80px;
+}
+td, th{
+    width:100px;
+    height:100px;  
 }
 
