@@ -239,6 +239,11 @@ ol#spanModifyChalkboard{
     text-align: center;
     margin: 50px;
 }
+ul#spanModifyChalkboard{
+    font-size: 40px;
+    text-align: center;
+    margin: 50px;
+}
 /*------Tic Tac Toe ------*/
 table {
     border-collapse: collapse ;
