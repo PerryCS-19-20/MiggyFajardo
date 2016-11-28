@@ -2,29 +2,56 @@
 <html>
 <head>
      <title>
-         Home
+         To Do List
      </title>
 	 <link rel="stylesheet" type="text/css" href="style2.css"> 
 	 	<script>
-			function testHTML() {
-				var userInput = document.getElementById("userInput");
-				var theSpan = document.getElementById("s1");
-				theSpan.innerHTML = userInput.value;		   
-			}
+                        function todo() {
+                                var userInput = document.getElementById("textInputChalkboard");
+                                var theSpan = document.getElementById("spanModifyChalkboard");
+                                
+                                 var newItem = document.createElement("li");  
+                                 newItem.textContent = "I will not" + " " + userInput.value;
+                                 theSpan.appendChild(newItem);
+                        }
 		</script>
 </head>
 
 	 <body>
-             <h2> Javascript Text Input </h2>
-	
-		<textarea rows="10" cols="80" id="userInput" class="box">Write your text here.</textarea>
-	<br>
-                <p><span id="s1" style="text-align:center";>Output Text</span></p>
-		<button class="button button5" onclick="testHTML();">Click</button>
-                
+    <div class="header">
+        <div class="headerContent">
+            <div class="nav">
                 <ul>
-                    
-                    
+                   <li><a href="https://perryma.tk/MiggyFajardo/">Home</a></li>
+                   <li><a href="https://perryma.tk/MiggyFajardo/gallery">Gallery</a></li>
+                   <li><a href="https://perryma.tk/MiggyFajardo/about">About</a></li>
+                            <div class="dropdown">	
+                                <li class="drop">Dropdown</li>
+                            <div class="dropdown-content">
+                            <a href="https://perryma.tk/MiggyFajardo/breakout">Breakout</a>
+                            <a href="https://perryma.tk/MiggyFajardo/paint">Paint Splatter</a>
+                            <a href="https://perryma.tk/MiggyFajardo/popup">Eureka</a>
+                            <a href="https://perryma.tk/MiggyFajardo/events">Javascript Events</a>
+                            <a href="https://perryma.tk/MiggyFajardo/chalkboard">Chalkboard</a>
+                            <a href="https://perryma.tk/MiggyFajardo/todolist">To Do List</a>
+                            <a href="https://perryma.tk/MiggyFajardo/tictactoe">Tic-Tac-Toe</a>
+                            </div>
+                     </div>
                 </ul>
+            </div>
+        </div>
+        <div class="headerBreak"></div>
+    </div>
+             <h2> To Do List </h2>
+	
+		<textarea rows="10" cols="80" id="textInputChalkboard" class="box">Write your text here.</textarea>
+	<br>
+		<button class="button button5" onclick="todo();">Click</button>
+                <div>
+                     <ul id="spanModifyChalkboard">
+                    
+                </ul> 
+                </div>
+                
 </body>
 </html>
