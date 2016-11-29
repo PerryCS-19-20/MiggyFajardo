@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tic-Tac-Toe</title>
+         <link rel="stylesheet" type="text/css" href="style2.css"> 
+   
+    <script>
+			var win = false;
+			var PLAYER = "O";
+			var PLAYER = "X";
+		  function play(cellid) {
+			 
+		   var cell = document.getElementById(cellid);
+		   var spanTac = document.getElementById("spanTic");
+			 
+			 if((cell.textContent === "") && (win === false)) {
+			   cell.textContent = PLAYER; 
+			   
+			 
+				 if (PLAYER === "X") {  
+				   PLAYER = "O";
+				   spanTac.textContent = "O's turn";
+				   checkWinner("X");
+				 } else {
+				   PLAYER = "X";
+				   spanTac.textContent = "X's turn";
+				   checkWinner("O");
+				 } 
+				 
+			   } else if (win === false){
+				 spanTac.textContent = "Invalid move!";
+			   }  
+			   
+			 }
+			 
+		  function checkWinner(player) {    
+		   checkWin("td1", "td2", "td3", player);
+		   checkWin("td4", "td5", "td6", player);
+		   checkWin("td7", "td8", "td9", player);
+		   checkWin("td1", "td4", "td7", player);
+		   checkWin("td2", "td5", "td8", player);
+		   checkWin("td3", "td6", "td9", player);
+		   checkWin("td1", "td5", "td9", player);
+		   checkWin("td3", "td5", "td7", player);
+		   }
+		   
+		  function checkWin(cell1id, cell2id ,cell3id, player) {
+			var cell1 = document.getElementById(cell1id);
+			var cell2 = document.getElementById(cell2id);
+			var cell3 = document.getElementById(cell3id);
+			var spanTac = document.getElementById("spanTic");
+
+
+			 
+			if ((cell1.textContent === cell2.textContent) && 
+				(cell2.textContent === cell3.textContent) && 
+				(cell1.textContent !== "")) {
+			  win = true;
+				
+			  spanTac.textContent  = player + " " + "is the winner!";
+			  cell1.style.backgroundColor = "white";
+			  cell2.style.backgroundColor = "white";
+			  cell3.style.backgroundColor = "white";
+			}
+		  }
+        </script>
+     </head>    
+    <body>
+    <div class="header">
+        <div class="headerContent">
+		          
+            <div class="nav">
+                <ul>
+				
+                    <li><a class="active">Home</a></li>
+                    <li><a href="https://perryma.tk/MiggyFajardo/gallery">Gallery</a></li>
+                    <li><a href="https://perryma.tk/MiggyFajardo/about">About</a></li>
+					
+					
+				<div class="dropdown">
+				
+					<li class="drop">Links</li>
+					<div class="dropdown-content">
+					<a href="https://perryma.tk/MiggyFajardo/breakout">Breakout</a>
+					<a href="https://perryma.tk/MiggyFajardo/paint">Paint Splatter</a>
+					<a href="https://perryma.tk/MiggyFajardo/popup">Eureka</a>
+					<a href="https://perryma.tk/MiggyFajardo/events">Javascript Events</a>
+                                        <a href="https://perryma.tk/MiggyFajardo/chalkboard">Chalkboard</a>
+                                        <a href="https://perryma.tk/MiggyFajardo/todolist">To Do List</a>
+                                        <a href="https://perryma.tk/MiggyFajardo/tictactoe">Tic-Tac-Toe</a>
+				</div>
+				</div>
+					 
+					  
+                </ul>
+            </div>
+        </div>
+        <div class="headerBreak"></div>
+    </div>
+            <h1> Tic-Tac-Toe</h1>
+            <table>
+                <tr>
+                    <td  id="td1" onclick="play('td1');"></td>
+                    <td  id="td2" onclick="play('td2');"></td>
+                    <td  id="td3" onclick="play('td3');"></td>
+                </tr>
+                <tr>
+                    <td  id="td4" onclick="play('td4');"></td>
+                    <td  id="td5" onclick="play('td5');"></td>
+                    <td  id="td6" onclick="play('td6');"></td>
+                </tr>
+                <tr>
+                    <td  id="td7" onclick="play('td7');"></td>
+                    <td  id="td8" onclick="play('td8');"></td>
+                    <td  id="td9" onclick="play('td9');"></td>
+                </tr>
+            </table>
+			
+			<p><span id="spanTic" class="tic"> X's Turn</span></p>
+    </body>
+</html>
