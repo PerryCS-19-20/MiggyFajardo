@@ -1,226 +1,226 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Breakout</title>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-		<script type="text/javascript" src="https://static.codehs.com/gulp/cb01b4a22ffd3971572a8a1ab9f3b7c4cb17f383/chs-js-lib/chs.js"></script>
-		<link rel="stylesheet" type="text/css" href="style2.css"> 
-		<script>
-                      window.onload = function() {
-/* Constants for bricks */
-var NUM_ROWS = 8;
-var BRICK_TOP_OFFSET = 10;
-var BRICK_SPACING = 2;
-var NUM_BRICKS_PER_ROW = 10;
-var BRICK_HEIGHT = 10;
-var SPACE_FOR_BRICKS = getWidth() - (NUM_BRICKS_PER_ROW + 1) * BRICK_SPACING;
-var BRICK_WIDTH = SPACE_FOR_BRICKS / NUM_BRICKS_PER_ROW;
+    <head>
+        <title>Breakout</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script type="text/javascript" src="https://static.codehs.com/gulp/cb01b4a22ffd3971572a8a1ab9f3b7c4cb17f383/chs-js-lib/chs.js"></script>
+        <link rel="stylesheet" type="text/css" href="style2.css"> 
+        <script>
+            window.onload = function() {
+                /* Constants for bricks */
+                var NUM_ROWS = 8;
+                var BRICK_TOP_OFFSET = 10;
+                var BRICK_SPACING = 2;
+                var NUM_BRICKS_PER_ROW = 10;
+                var BRICK_HEIGHT = 10;
+                var SPACE_FOR_BRICKS = getWidth() - (NUM_BRICKS_PER_ROW + 1) * BRICK_SPACING;
+                var BRICK_WIDTH = SPACE_FOR_BRICKS / NUM_BRICKS_PER_ROW;
 
-var NUM_TOTAL_BRICKS = 0;
-var BRICK_COLOR= 1;
-var brick;
-var CURRENT_ROW = 1;
-var START_ROW = CURRENT_ROW;
-var brickX = 0 + BRICK_SPACING;
-var brickY = 0 + BRICK_TOP_OFFSET;
+                var NUM_TOTAL_BRICKS = 0;
+                var BRICK_COLOR = 1;
+                var brick;
+                var CURRENT_ROW = 1;
+                var START_ROW = CURRENT_ROW;
+                var brickX = 0 + BRICK_SPACING;
+                var brickY = 0 + BRICK_TOP_OFFSET;
 
-/* Constants for ball and paddle */
-var PADDLE_WIDTH = 80;
-var PADDLE_HEIGHT = 15;
-var PADDLE_OFFSET = 10;
-var BALL_RADIUS = 15;
+                /* Constants for ball and paddle */
+                var PADDLE_WIDTH = 80;
+                var PADDLE_HEIGHT = 15;
+                var PADDLE_OFFSET = 10;
+                var BALL_RADIUS = 15;
 
 //ball bounce
-var ball;
-var dx = 4;
-var dy = 6;
+                var ball;
+                var dx = 4;
+                var dy = 6;
 
 
 //score
-var score = 0;
+                var score = 0;
 
 //paddle
-    var rect = new Rectangle(PADDLE_WIDTH,PADDLE_HEIGHT);
-    rect.setPosition(150, 450);
-    add(rect);
-    
-function start(){
-	    drawRows();
-	    
-    	ball = new Circle(BALL_RADIUS);
-    	ball.setPosition(getWidth()/2, getHeight()/2);
-    	add(ball);
-	
-    	setTimer(draw, 1);
+                var rect = new Rectangle(PADDLE_WIDTH, PADDLE_HEIGHT);
+                rect.setPosition(150, 450);
+                add(rect);
 
-    	mouseMoveMethod(onMouseMove);
-    	keyUpMethod(cheat);
-}
+                function start() {
+                    drawRows();
+
+                    ball = new Circle(BALL_RADIUS);
+                    ball.setPosition(getWidth() / 2, getHeight() / 2);
+                    add(ball);
+
+                    setTimer(draw, 1);
+
+                    mouseMoveMethod(onMouseMove);
+                    keyUpMethod(cheat);
+                }
 //bricks
-function drawRows(){
-    
-    while(NUM_TOTAL_BRICKS < NUM_BRICKS_PER_ROW){
-        brick = new Rectangle(BRICK_WIDTH, BRICK_HEIGHT);
-        brick.setPosition(brickX,brickY);
-        if(BRICK_COLOR == 1 || BRICK_COLOR == 2){
-            brick.setColor(Color.red);
-    }else if(BRICK_COLOR == 3 || BRICK_COLOR == 4){
-            brick.setColor(Color.orange);
-    }else if(BRICK_COLOR == 5 || BRICK_COLOR == 6){
-            brick.setColor(Color.green);
-    }else if(BRICK_COLOR == 7 || BRICK_COLOR == 8){
-            brick.setColor(Color.blue);
-    }
-    
-    add(brick);
-    brickX += BRICK_WIDTH + BRICK_SPACING;
-    NUM_TOTAL_BRICKS++;
-    
-    if(NUM_TOTAL_BRICKS >= NUM_BRICKS_PER_ROW && CURRENT_ROW != NUM_ROWS){
-        brickY += BRICK_HEIGHT + BRICK_SPACING;
-        brickX = 0 + BRICK_SPACING;
-        CURRENT_ROW++;
-        BRICK_COLOR++;
-        NUM_TOTAL_BRICKS = 0;
-        }
-    }
-}
+                function drawRows() {
+
+                    while (NUM_TOTAL_BRICKS < NUM_BRICKS_PER_ROW) {
+                        brick = new Rectangle(BRICK_WIDTH, BRICK_HEIGHT);
+                        brick.setPosition(brickX, brickY);
+                        if (BRICK_COLOR == 1 || BRICK_COLOR == 2) {
+                            brick.setColor(Color.red);
+                        } else if (BRICK_COLOR == 3 || BRICK_COLOR == 4) {
+                            brick.setColor(Color.orange);
+                        } else if (BRICK_COLOR == 5 || BRICK_COLOR == 6) {
+                            brick.setColor(Color.green);
+                        } else if (BRICK_COLOR == 7 || BRICK_COLOR == 8) {
+                            brick.setColor(Color.blue);
+                        }
+
+                        add(brick);
+                        brickX += BRICK_WIDTH + BRICK_SPACING;
+                        NUM_TOTAL_BRICKS++;
+
+                        if (NUM_TOTAL_BRICKS >= NUM_BRICKS_PER_ROW && CURRENT_ROW != NUM_ROWS) {
+                            brickY += BRICK_HEIGHT + BRICK_SPACING;
+                            brickX = 0 + BRICK_SPACING;
+                            CURRENT_ROW++;
+                            BRICK_COLOR++;
+                            NUM_TOTAL_BRICKS = 0;
+                        }
+                    }
+                }
 
 //ball bounce
-function draw(){
-    checkbounces();
-	checkWalls();
-	ball.move(dx, dy);
-    
-	   if(ball.getY()+BALL_RADIUS>getHeight()){
-        stopTimer(draw);
-        var loseMessage = new Text("You Lose");
-        loseMessage.setPosition(getWidth()/2-60,getHeight()/2);
-        loseMessage.setColor(Color.red);
-        add(loseMessage);
-	   }
+                function draw() {
+                    checkbounces();
+                    checkWalls();
+                    ball.move(dx, dy);
 
-}
+                    if (ball.getY() + BALL_RADIUS > getHeight()) {
+                        stopTimer(draw);
+                        var loseMessage = new Text("You Lose");
+                        loseMessage.setPosition(getWidth() / 2 - 60, getHeight() / 2);
+                        loseMessage.setColor(Color.red);
+                        add(loseMessage);
+                    }
+
+                }
 
 //ball
-function checkWalls(){
-	// Bounce off right wall
-	if(ball.getX() + ball.getRadius() > getWidth()){
-		dx = -dx;
-	}
-	
-	// Bounce off left wall
-	if(ball.getX() - ball.getRadius() < 0){
-		dx = -dx;
-	}
-	
-	// Bounce off bottom wall
-	if(ball.getY() + ball.getRadius() > getHeight()){
-		dy = -dy;
-	}
-	
-	// Bounce off top wall
-	if(ball.getY() - ball.getRadius() < 0){
-		dy = -dy;
-	}
-}
+                function checkWalls() {
+// Bounce off right wall
+                    if (ball.getX() + ball.getRadius() > getWidth()) {
+                        dx = -dx;
+                    }
+
+// Bounce off left wall
+                    if (ball.getX() - ball.getRadius() < 0) {
+                        dx = -dx;
+                    }
+
+// Bounce off bottom wall
+                    if (ball.getY() + ball.getRadius() > getHeight()) {
+                        dy = -dy;
+                    }
+
+// Bounce off top wall
+                    if (ball.getY() - ball.getRadius() < 0) {
+                        dy = -dy;
+                    }
+                }
 
 //paddle
-function onMouseMove(e){
-     rect.setPosition(e.getX()-PADDLE_WIDTH/2,getHeight()-PADDLE_OFFSET*2.5);
-     }
+                function onMouseMove(e) {
+                    rect.setPosition(e.getX() - PADDLE_WIDTH / 2, getHeight() - PADDLE_OFFSET * 2.5);
+                }
 //bounce   
-function checkbounces(){
-    var upbouncy = getElementAt(ball.getX(),ball.getY()-BALL_RADIUS);
-    if(upbouncy != null && upbouncy!=rect){
-score++;
-remove(upbouncy);
-    dy=-dy;
-}
-    var downbouncy = getElementAt(ball.getX(),ball.getY()+BALL_RADIUS);
-    if(downbouncy != null && downbouncy!=rect){
-    score++;
-    remove(downbouncy);
-    dy=-dy;
-}
-    var leftbouncy = getElementAt(ball.getX()-BALL_RADIUS,ball.getY());
-    if(leftbouncy != null && leftbouncy!=rect){
-    score++;
-    remove(leftbouncy);
-    dx=-dx;
-}
-  var rightbouncy = getElementAt(ball.getX()+BALL_RADIUS,ball.getY());
-    if(rightbouncy != null && rightbouncy!=rect){
-    score++;
-    remove(rightbouncy);
-    dx=-dx;
-}
-   var bouncy = getElementAt(ball.getX(),ball.getY()+BALL_RADIUS);
-    if(bouncy != null && ball.getY()>=getHeight()/2){
-    dy=-dy;
-}
+                function checkbounces() {
+                    var upbouncy = getElementAt(ball.getX(), ball.getY() - BALL_RADIUS);
+                    if (upbouncy != null && upbouncy != rect) {
+                        score++;
+                        remove(upbouncy);
+                        dy = -dy;
+                    }
+                    var downbouncy = getElementAt(ball.getX(), ball.getY() + BALL_RADIUS);
+                    if (downbouncy != null && downbouncy != rect) {
+                        score++;
+                        remove(downbouncy);
+                        dy = -dy;
+                    }
+                    var leftbouncy = getElementAt(ball.getX() - BALL_RADIUS, ball.getY());
+                    if (leftbouncy != null && leftbouncy != rect) {
+                        score++;
+                        remove(leftbouncy);
+                        dx = -dx;
+                    }
+                    var rightbouncy = getElementAt(ball.getX() + BALL_RADIUS, ball.getY());
+                    if (rightbouncy != null && rightbouncy != rect) {
+                        score++;
+                        remove(rightbouncy);
+                        dx = -dx;
+                    }
+                    var bouncy = getElementAt(ball.getX(), ball.getY() + BALL_RADIUS);
+                    if (bouncy != null && ball.getY() >= getHeight() / 2) {
+                        dy = -dy;
+                    }
 
-}
+                }
 
-function score(){
-    if(score>=80)
-    var win = new Text("NICE!");
-    win.setPosition(145,240);
-    win.setColor(Color.GREEN);
-    add(win);
-    stopTimer(draw);
-}
+                function score() {
+                    if (score >= 80)
+                        var win = new Text("NICE!");
+                    win.setPosition(145, 240);
+                    win.setColor(Color.GREEN);
+                    add(win);
+                    stopTimer(draw);
+                }
 
-function cheat(e){
-    if (e.keyCode == Keyboard.UP){
-        rect.setPosition(ball.getX()-PADDLE_WIDTH,getHeight()-PADDLE_OFFSET*2.5);
-        setTimer(draw,1)
-    }
-}
-
-    
+                function cheat(e) {
+                    if (e.keyCode == Keyboard.UP) {
+                        rect.setPosition(ball.getX() - PADDLE_WIDTH, getHeight() - PADDLE_OFFSET * 2.5);
+                        setTimer(draw, 1)
+                    }
+                }
 
 
-                        if (typeof start === 'function') {
-                            start();
-                        }
-                    };
-  	</script>
-		<style>
-			canvas {
-    				border: 1px solid black;
-			}
-		</style>
-	</head>
-	<body>
-                <div class="header">
-        <div class="headerContent">
 
-            <div class="nav">
-                <ul>
-                    <li><a href="https://perryma.tk/MiggyFajardo/">Home</a></li>
-                    <li><a href="https://perryma.tk/MiggyFajardo/gallery">Gallery</a></li>
-                    <li><a href="https://perryma.tk/MiggyFajardo/about">About</a></li>
-                    	<div class="dropdown">
-				
-				<li class="drop">Links</li>
-				<div class="dropdown-content">
-				<a href="https://perryma.tk/MiggyFajardo/breakout">Breakout</a>
-				<a href="https://perryma.tk/MiggyFajardo/paint">Paint Splatter</a>
-				<a href="https://perryma.tk/MiggyFajardo/popup">Eureka</a>
-				<a href="https://perryma.tk/MiggyFajardo/events">Javascript Events</a>
+
+                if (typeof start === 'function') {
+                    start();
+                }
+            };
+        </script>
+        <style>
+            canvas {
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <div class="headerContent">
+
+                <div class="nav">
+                    <ul>
+                        <li><a href="https://perryma.tk/MiggyFajardo/">Home</a></li>
+                        <li><a href="https://perryma.tk/MiggyFajardo/gallery">Gallery</a></li>
+                        <li><a href="https://perryma.tk/MiggyFajardo/about">About</a></li>
+                        <div class="dropdown">
+
+                            <li class="drop">Links</li>
+                            <div class="dropdown-content">
+                                <a href="https://perryma.tk/MiggyFajardo/breakout">Breakout</a>
+                                <a href="https://perryma.tk/MiggyFajardo/paint">Paint Splatter</a>
+                                <a href="https://perryma.tk/MiggyFajardo/popup">Eureka</a>
+                                <a href="https://perryma.tk/MiggyFajardo/events">Javascript Events</a>
                                 <a href="https://perryma.tk/MiggyFajardo/chalkboard">Chalkboard</a>
                                 <a href="https://perryma.tk/MiggyFajardo/todolist">To Do List</a>
                                 <a href="https://perryma.tk/MiggyFajardo/tictactoe">Tic-Tac-Toe</a>
-			</div>
-		</div>
-                </ul>
+                            </div>
+                        </div>
+                    </ul>
+                </div>
             </div>
+            <div class="headerBreak"></div>
         </div>
-        <div class="headerBreak"></div>
-    </div>
-		<div id="canvasContainer" width="100%" style="width: 100%; height: 100%; overflow: hidden;">
-			<canvas width="800" height="800" class="codehs-editor-canvas"></canvas>
-		</div>
-	</body>
+        <div id="canvasContainer" width="100%" style="width: 100%; height: 100%; overflow: hidden;">
+            <canvas width="800" height="800" class="codehs-editor-canvas"></canvas>
+        </div>
+    </body>
 </html>
