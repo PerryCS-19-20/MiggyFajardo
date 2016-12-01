@@ -65,12 +65,17 @@
                                body.appendChild(timesTable);
 
                                // Fill in the multiplication table
-                               for(var i = 0; i < 11 ; i++)
-                               var row = document.createElement("number");
-                               timesTable.appendChild(row);
-                           }
-                           
-                           
+                               for(var i = 0; i < 11 ; i++){
+                               var tr = document.createElement("tr");
+                               timesTable.appendChild(tr);
+							   
+							   for(var j = 0; j < 11 ; j++){
+							   var td = document.createElement("td");
+                               tr.appendChild(td);
+							 }
+						}
+                    }
+   
               </script>
     </body>
 </html>
