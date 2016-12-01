@@ -8,13 +8,11 @@
         <link rel="stylesheet" type="text/css" href="style2.css"> 
         <style>
             table, td, th {
-                border: 1px solid white;
-                margin: auto;
+                border: 1px solid white;    
                 text-align: center;                
-                margin-bottom: 200px;
-                font-size:80px;
-                border-collapse: collapse ;
-                border-spacing:15px;
+                margin-bottom: 10px;
+                font-size:40px;
+                border-collapse: collapse ;    
             }
             td {
                 text-align: right;
@@ -54,6 +52,7 @@
         </div>
         <div class="headerBreak"></div>
     </div>
+        <h1> Table </h1>
                 <script>
                            function buildTimesTable() {
                                // Create a table for the multiplication table
@@ -65,12 +64,15 @@
                                body.appendChild(timesTable);
 
                                // Fill in the multiplication table
-                               for(var i = 0; i < 11 ; i++)
-                               var row = document.createElement("number");
+                               for(var i = 0; i < 11 ; i++){
+                                   
+                               
+                               var row = document.createElement("table");
                                timesTable.appendChild(row);
+                           
+                               row.textContent=i;
                            }
-                           
-                           
+                           }
               </script>
     </body>
 </html>
