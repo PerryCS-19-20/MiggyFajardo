@@ -247,11 +247,11 @@ ul#spanModifyChalkboard{
     margin: 50px;
 }
 /*------Tic Tac Toe ------*/
-table {
+.row {
     border-collapse: collapse ;
     border-spacing:15px;
 }
-table, tr, td{
+.row{
     border: 1px solid white;
     margin: auto;
     text-align: center;                

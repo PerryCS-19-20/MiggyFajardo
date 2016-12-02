@@ -7,15 +7,20 @@
         <title>Times Table</title>
         <link rel="stylesheet" type="text/css" href="style2.css"> 
         <style>
-            table, td, th {
-                border: 1px solid white;    
+            table, tr, td {
+                border: 1px solid white;
+                margin: auto;
                 text-align: center;                
                 margin-bottom: 60px;
-                font-size:40px;
-                border-collapse: collapse ;    
+                font-size:50px;
+                
+            }
+            table{
+                    border-collapse: collapse ;
+                    border-spacing:15px;
             }
             td {
-                text-align: right;
+                text-align: center;
             }
         </style>
        
@@ -68,10 +73,11 @@
                                for(var i = 0; i < 11 ; i++){
                                var tr = document.createElement("tr");
                                timesTable.appendChild(tr);
-							   
-					for(var j = 0; j < 11 ; j++){
+                               tr.textContent=i;
+					for(var j = 0; j < 11 ; j++){                                            
 					var td = document.createElement("td");
                              		tr.appendChild(td);
+                                        td.textContent=j;
 					}
                                         
                                 }
