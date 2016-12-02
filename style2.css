@@ -115,6 +115,7 @@ p {
 }
 
 .dropdown-content {
+    
     display: none;
     position: absolute;
     background-color: #f9f9f9;
@@ -136,6 +137,7 @@ p {
 }
 
 .dropdown:hover li {
+    transition-duration: 0.3s;
     background-color: grey;
     padding: 6px 76px;
     display:block;
