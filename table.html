@@ -7,82 +7,89 @@
         <title>Times Table</title>
         <link rel="stylesheet" type="text/css" href="style2.css"> 
         <style>
-            table, tr, td {
+
+            table, td {
                 border: 1px solid white;
-                margin: auto;
-                text-align: center;                
+                margin:auto;
+                text-align:center;
+                font-size: 50px;
                 margin-bottom: 60px;
-                font-size:50px;
-                
+            }
+            td, th{
+                width:100px;
+
             }
             table{
-                    border-collapse: collapse ;
-                    border-spacing:15px;
-            }
-            td {
-                text-align: center;
+                border-collapse: collapse ;
+
             }
         </style>
-       
+
     </head>
     <body onload="buildTimesTable()">
-            <div class="header">
-        <div class="headerContent">
+        <div class="header">
+            <div class="headerContent">
 
-            <div class="nav">
-                <ul>
-				
-                    <li><a href="https://perryma.tk/MiggyFajardo/">Home</a></li>
-                    <li><a href="https://perryma.tk/MiggyFajardo/gallery">Gallery</a></li>
-                    <li><a href="https://perryma.tk/MiggyFajardo/about">About</a></li>
-					
-					
-				<div class="dropdown">
-				
-					<li class="drop">Links</li>
-					<div class="dropdown-content">
-					<a href="https://perryma.tk/MiggyFajardo/breakout">Breakout</a>
-					<a href="https://perryma.tk/MiggyFajardo/paint">Paint Splatter</a>
-					<a href="https://perryma.tk/MiggyFajardo/popup">Eureka</a>
-					<a href="https://perryma.tk/MiggyFajardo/events">Javascript Events</a>
-                                        <a href="https://perryma.tk/MiggyFajardo/chalkboard">Chalkboard</a>
-                                        <a href="https://perryma.tk/MiggyFajardo/todolist">To Do List</a>
-                                        <a href="https://perryma.tk/MiggyFajardo/tictactoe">Tic-Tac-Toe</a>
-                                        <a href="https://perryma.tk/MiggyFajardo/table">Table</a>
-				</div>
-				</div>
-					 
-					  
-                </ul>
+                <div class="nav">
+                    <ul>
+
+                        <li><a href="https://perryma.tk/MiggyFajardo/">Home</a></li>
+                        <li><a href="https://perryma.tk/MiggyFajardo/gallery">Gallery</a></li>
+                        <li><a href="https://perryma.tk/MiggyFajardo/about">About</a></li>
+
+
+                        <div class="dropdown">
+
+                            <li class="drop">Links</li>
+                            <div class="dropdown-content">
+                                <a href="https://perryma.tk/MiggyFajardo/breakout">Breakout</a>
+                                <a href="https://perryma.tk/MiggyFajardo/paint">Paint Splatter</a>
+                                <a href="https://perryma.tk/MiggyFajardo/popup">Eureka</a>
+                                <a href="https://perryma.tk/MiggyFajardo/events">Javascript Events</a>
+                                <a href="https://perryma.tk/MiggyFajardo/chalkboard">Chalkboard</a>
+                                <a href="https://perryma.tk/MiggyFajardo/todolist">To Do List</a>
+                                <a href="https://perryma.tk/MiggyFajardo/tictactoe">Tic-Tac-Toe</a>
+                                <a href="https://perryma.tk/MiggyFajardo/table">Table</a>
+                            </div>
+                        </div>
+
+
+                    </ul>
+                </div>
             </div>
+            <div class="headerBreak"></div>
         </div>
-        <div class="headerBreak"></div>
-    </div>
         <h1> Table </h1>
-                <script>
-                           function buildTimesTable() {
-                               // Create a table for the multiplication table
-                               var timesTable = document.createElement("table");
-                               timesTable.id = "timesTable";
+        <script>             
+        function buildTimesTable() {
+            var timesTable = document.createElement("table");
+            timesTable.id = "timesTable";
+            
+            var body = document.body;
+            body.appendChild(timesTable);
 
-                               // Add the table to the document's body
-                               var body = document.body;
-                               body.appendChild(timesTable);
+            for (var i = 0; i < 11; i++) {
+                var row = document.createElement("tr");
+                timesTable.appendChild(row);
+                row.textContent = i;
+                
+                for (var j = 1; j < 11; j++) {
+                    if(i!= 0){
+                var td = document.createElement("td");
+                    row.appendChild(td);
+                    td.textContent = j*i;
+                    } else {
+                        var th = document.createElement("th");
+                    row.appendChild(th);
+                    th.textContent = j;
+                    }
+                }
 
-                               // Fill in the multiplication table
-                               for(var i = 0; i < 11 ; i++){
-                               var tr = document.createElement("tr");
-                               timesTable.appendChild(tr);
-                               tr.textContent=i;
-					for(var j = 0; j < 11 ; j++){                                            
-					var td = document.createElement("td");
-                             		tr.appendChild(td);
-                                        td.textContent=j;
-					}
-                                        
-                                }
-                           }
-              </script>
+            }
+
+        }
+        
+        </script>
     </body>
 </html>
 
