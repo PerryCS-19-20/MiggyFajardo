@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title>
+         Home
+     </title>
+	 <link rel="stylesheet" type="text/css" href="style2.css"> 
+	 	<script>
+			function testHTML() {
+				var userInput = document.getElementById("userInput");
+				var theSpan = document.getElementById("s1");
+				theSpan.innerHTML = userInput.value;		   
+			}
+		</script>
+</head>
+
+	 <body>
+    <div class="header">
+        <div class="headerContent">
+		            <a href="https://perryma.tk/MiggyFajardo/">
+                <img src="https://raw.githubusercontent.com/PerryHighCS/MiggyFajardo/master/Pictures/logo.png" href="https://perryma.tk/MiggyFajardo/" alt="Logo" title="Logo" />
+            </a>
+            <div class="nav">
+                <ul>
+				
+                    <li><a class="active">Home</a></li>
+                    <li><a href="https://perryma.tk/MiggyFajardo/gallery">Gallery</a></li>
+                    <li><a href="https://perryma.tk/MiggyFajardo/about">About</a></li>
+					
+					
+				<div class="dropdown">
+				
+					<li class="drop">Links</li>
+					<div class="dropdown-content">
+					<a href="https://perryma.tk/MiggyFajardo/breakout">Breakout</a>
+					<a href="https://perryma.tk/MiggyFajardo/paint">Paint Splatter</a>
+					<a href="https://perryma.tk/MiggyFajardo/popup">Eureka</a>
+					<a href="https://perryma.tk/MiggyFajardo/events">Javascript Events</a>
+                                        <a href="https://perryma.tk/MiggyFajardo/chalkboard">Chalkboard</a>
+                                        <a href="https://perryma.tk/MiggyFajardo/todolist">To Do List</a>
+                                        <a href="https://perryma.tk/MiggyFajardo/tictactoe">Tic-Tac-Toe</a>
+                                        <a href="https://perryma.tk/MiggyFajardo/table">Table</a>
+                                        <a href="https://perryma.tk/MiggyFajardo/slider">Multiplication Slider</a>
+				</div>
+				</div>
+					 
+					  
+                </ul>
+            </div>
+        </div>
+        <div class="headerBreak"></div>
+    </div>
+             <h2> Javascript Text Input </h2>
+	
+		<textarea rows="10" cols="80" id="userInput" class="box">Write your text here.</textarea>
+	<br>
+                <p><span id="s1" style="text-align:center";>Output Text</span></p>
+		<button class="button button5" onclick="testHTML();">Click</button>
+                <br>
+</body>
+</html>
