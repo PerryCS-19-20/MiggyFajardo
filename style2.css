@@ -258,5 +258,10 @@ ul#spanModifyChalkboard{
     margin-bottom: 200px;
     font-size:80px;
 }
-
+/*---Table-----*/
+.slide{
+	margin: auto;
+	text-align: center;
+	font-size:30px;
+}
 

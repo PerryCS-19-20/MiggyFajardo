@@ -1,10 +1,10 @@
-
+    
 
 <!DOCTYPE html>
 <html>
     <head>
 
-        <title>Times Table</title>
+        <title>Multiplication Slider</title>
         <link rel="stylesheet" type="text/css" href="style2.css"> 
         <style>
 
@@ -19,10 +19,8 @@
                 width:100px;
 
             }
-            table{
-                border-collapse: collapse ;
 
-            }
+			
         </style>
 
     </head>
@@ -59,42 +57,55 @@
             </div>
             <div class="headerBreak"></div>
         </div>
-        <h1> Table </h1>
-        <script>             
-        function buildTimesTable() {
-            var timesTable = document.createElement("table");
+        <h1> Slider Table </h1>
+		<p class="slide">
+			Table Width:<input type="range" id ="tableWidth" min="10" max ="101" value="101" onchange="buildTimesTable();"><br>
+			Table Height:<input type="range" id ="tableHeight" min="10" max ="101" value="101" onchange="buildTimesTable();"><br>
+		</p>
+        <script>                       
+function buildTimesTable() {
+            var timesTable = document.getElementById("timesTable");
+            if(timesTable !== null){
+                timesTable.parentNode.removeChild(timesTable);
+            }
+			
+            timesTable = document.createElement("Table");
             timesTable.id = "timesTable";
             
             var body = document.body;
             body.appendChild(timesTable);
-
-            for (var i = 0; i < 11; i++) {
-                var row = document.createElement("tr");
-                timesTable.appendChild(row);
-                row.textContent = i;
-                
-                for (var j = 1; j < 11; j++) {
-                    if(i!= 0){
-                var td = document.createElement("td");
-                    row.appendChild(td);
-                    td.textContent = j*i;
-                    if(i == 1 || i == 4 || i == 7 || i == 10 || j == 3 || j == 4 || j == 7 || j == 8){
-                    td.style.color="powderblue";
-                }else{
-                    td.style.color="white";
-                }
-                    } else {
-                        var th = document.createElement("th");
-                    row.appendChild(th);
-                    th.textContent = j;
+            
+            var width = document.getElementById("tableWidth").value;
+            var height = document.getElementById("tableHeight").value;
+            
+            for(var i=0;i<height;i++){
+                var tableRow = document.createElement("tr");
+                timesTable.appendChild(tableRow);
+                for(var j=0;j<width;j++){
+                    var cell;
+                    if(i === 0){
+                        cell = document.createElement("th");
+                        if(j>0){
+                            cell.textContent = j;
+                        }
+                    }else{
+                        if(j === 0){
+                            cell = document.createElement("th");
+                            cell.textContent = i;
+                        }else{
+                            cell = document.createElement("td");
+                            cell.textContent = j*i;
+                        }
                     }
+                    timesTable.appendChild(cell);
                 }
-
             }
-
         }
+
         
         </script>
+
     </body>
 </html>
+
 
