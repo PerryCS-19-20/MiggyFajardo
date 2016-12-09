@@ -6,7 +6,17 @@ function buildMap(sitemapWrapper){
     list.appendChild(item("About", "about"))
     list.appendChild(item("Gallery", "gallery"))
     
+    subList.appendChild(item("Breakout", "breakout"));
+    list.appendChild(subList);
+    siteMap.appendChild(list);
 }
-function item
-
+}
+function item(name, link) {
+    var sitemapWrapper = document.createElement("a");
+    var li = document.createElement("li");
+    sitemapWrapper.href = link;
+    sitemapWrapper.textContent = name;
+    li.appendChild(sitemapWrapper);
+    return li;
+}
 
