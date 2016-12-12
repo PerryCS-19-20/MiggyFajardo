@@ -1,14 +1,75 @@
-<!--
-To change this template, choose Tools | Templates
-and open the template in the editor.
--->
+
 <!DOCTYPE html>
 <html>
     <head>
-        <title></title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Calculator</title>
+        <link rel="stylesheet" type="text/css" href="style2.css"> 
+        <script>
+            function calc() {
+                var l = parseFloat(document.getElementById("length").value);
+                var h = parseFloat(document.getElementById("height").value);
+                var w = parseFloat(document.getElementById("width").value);
+                var vol = document.getElementById("vol");
+
+                vol.value = ((l * w * h) / 3);        // Show volume of cylinder
+            }
+        </script>
+
+        <style>
+            input[type=number] {
+                width: 64px;
+            }
+        </style>
     </head>
     <body>
-        <div>TODO write content</div>
+        <div class="header">
+            <div class="headerContent">
+                <div class="nav">
+                    <ul>
+
+                        <li><a class="active">Home</a></li>
+                        <li><a href="https://perryma.tk/MiggyFajardo/gallery">Gallery</a></li>
+                        <li><a href="https://perryma.tk/MiggyFajardo/about">About</a></li>
+
+
+                        <div class="dropdown">
+
+                            <li class="drop">Links</li>
+                            <div class="dropdown-content">
+                                <a href="https://perryma.tk/MiggyFajardo/breakout">Breakout</a>
+                                <a href="https://perryma.tk/MiggyFajardo/paint">Paint Splatter</a>
+                                <a href="https://perryma.tk/MiggyFajardo/popup">Eureka</a>
+                                <a href="https://perryma.tk/MiggyFajardo/events">Javascript Events</a>
+                                <a href="https://perryma.tk/MiggyFajardo/chalkboard">Chalkboard</a>
+                                <a href="https://perryma.tk/MiggyFajardo/todolist">To Do List</a>
+                                <a href="https://perryma.tk/MiggyFajardo/tictactoe">Tic-Tac-Toe</a>
+                                <a href="https://perryma.tk/MiggyFajardo/table">Table</a>
+                                <a href="https://perryma.tk/MiggyFajardo/slider">Multiplication Slider</a>
+                                <a href="https://perryma.tk/MiggyFajardo/sitemap">Site Map</a>
+                                <a href="https://perryma.tk/MiggyFajardo/textinput">Text Input</a>
+                                <a href="https://perryma.tk/MiggyFajardo/calculator">Calculator</a>
+                            </div>
+                        </div>
+
+
+                    </ul>
+                </div>
+            </div>
+            <div class="headerBreak"></div>
+        </div>
+        <h2> Pyramid Volume </h2>
+    <center><img src="https://raw.githubusercontent.com/PerryHighCS/MiggyFajardo/master/Pictures/pyramid.png" class="gallery" alt="pyramid" align="middle" width="420" height="300">
+    </center>	
+        <h2>v = l*w*h /3; </h2>
+        <p id="calc">    
+            l: <input type="number" id="length" placeholder="length">
+            w: <input type="number" id="width" placeholder="width">
+            h: <input type="number" id="height" placeholder="height">
+            <button onclick="calc();" class="calc">Calculate</button>
+        </p>
+        <hr>
+        <p id="calc">
+        v: <input type="output" id="vol" placeholder="volume" readonly> 
+        
     </body>
 </html>

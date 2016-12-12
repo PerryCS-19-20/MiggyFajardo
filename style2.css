@@ -115,7 +115,7 @@ p {
 }
 
 .dropdown-content {
-    
+
     display: none;
     position: absolute;
     background-color: #f9f9f9;
@@ -261,10 +261,18 @@ ul#spanModifyChalkboard{
 }
 /*---Table-----*/
 .slide{
-	margin: auto;
-	text-align: center;
-	font-size:30px;
+    margin: auto;
+    text-align: center;
+    font-size:30px;
 }
-/*---SiteMap----*/
-
+/*---Calculator----*/
+p.calc{
+    margin: 10px;
+    padding: 30px;
+    text-align: center;
+    display: block; 
+    font-size: 80px;
+    font-family:Gabriola;
+    color: red;
+}
 
