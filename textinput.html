@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>JavaScript Events</title>
+        <title>
+            Javascript Text Input
+        </title>
         <link rel="stylesheet" type="text/css" href="style2.css"> 
         <script>
-            function changeColor(colorName) {
-                document.body.style.backgroundColor = colorName;
+            function testHTML() {
+                var userInput = document.getElementById("userInput");
+                var theSpan = document.getElementById("s1");
+                theSpan.innerHTML = userInput.value;
             }
         </script>
     </head>
 
-
     <body>
         <div class="header">
             <div class="headerContent">
-
                 <div class="nav">
                     <ul>
-                        <li><a href="https://perryma.tk/MiggyFajardo/">Home</a></li>
+
+                        <li><a class="active">Home</a></li>
                         <li><a href="https://perryma.tk/MiggyFajardo/gallery">Gallery</a></li>
                         <li><a href="https://perryma.tk/MiggyFajardo/about">About</a></li>
+
+
                         <div class="dropdown">
 
                             <li class="drop">Links</li>
@@ -37,19 +42,21 @@
                                 <a href="https://perryma.tk/MiggyFajardo/textinput">Text Input</a>
                             </div>
                         </div>
+
+
                     </ul>
                 </div>
             </div>
             <div class="headerBreak"></div>
         </div>
-        <h1 class="title"> Javascript Events </h1>
-        <h1 class="colors"><span onmouseover="changeColor('red');">Red</span></h1>
-        <h1 class="colors"><span onmouseover="changeColor('powderblue');">Powder Blue</span></h1>
-        <h1 class="colors"><span onmouseover="changeColor('green');">Green</span></h1>
-        <h1 class="colors"><span onmouseover="changeColor('yellow');">Yellow</span></h1>
-        <h1 class="colors"><span onmouseover="changeColor('black');">Black</span></h1>
-        <h1 class="colors"><span onmouseover="changeColor('white');">White</span></h1>
-        <h1 class="colors"><span onmouseover="changeColor('grey');">Grey</span></h1>
+        <h2> Javascript Text Input </h2>
 
+        <textarea rows="10" cols="80" id="userInput" class="box">Write your text here.</textarea>
+        <br>
+        <p><span id="s1" style="text-align:center";>Output Text</span></p>
+        <button class="button button5" onclick="testHTML();">Click</button>
+        <br>
     </body>
+</html>
+</body>
 </html>
