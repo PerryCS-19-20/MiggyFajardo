@@ -11,7 +11,7 @@
                 var w = parseFloat(document.getElementById("width").value);
                 var vol = document.getElementById("vol");
 
-                vol.value = ((l * w * h) / 3);        // Show volume of cylinder
+                vol.value = ((l * w * h) / 3);        // Show volume of pyramid
             }
         </script>
 
@@ -61,16 +61,16 @@
         <h2> Pyramid Volume </h2>
     <center><img src="https://raw.githubusercontent.com/PerryHighCS/MiggyFajardo/master/Pictures/pyramid.png" class="gallery" alt="pyramid" align="middle" width="420" height="300">
     </center>	
-        <h2>v = l*w*h /3; </h2>
+        <h2>v = l*w*h / 3; </h2>
         <p id="calc">    
-            l: <input type="number" id="length" placeholder="length">
-            w: <input type="number" id="width" placeholder="width">
-            h: <input type="number" id="height" placeholder="height">
+            L: <input type="number" id="length" placeholder="length">
+            W: <input type="number" id="width" placeholder="width">
+            H: <input type="number" id="height" placeholder="height">
             <button onclick="calc();" class="calc">Calculate</button>
         </p>
-        <hr>
+
         <p id="calc">
-        v: <input type="output" id="vol" placeholder="volume" readonly> 
+        V: <input type="output" id="vol" placeholder="volume" readonly> 
         
     </body>
 </html>
