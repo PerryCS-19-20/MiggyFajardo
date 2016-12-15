@@ -1,0 +1,78 @@
+
+
+body {
+    margin: 0;
+    background-color: grey;
+    font-weight: bold;
+    font-size:27px;
+    font-family:Calibri Light;
+}
+/* div or span that contains the menu list */
+#menubar {
+    position: relative;
+    padding: 0px;
+    display: block;
+    background-color: white;
+}
+
+
+/* class on a list that makes up the menu */
+#menubar > ul {
+    position: relative;
+    display:  inline-block;
+    text-decoration: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-size: 40px;
+}
+
+
+/* top-level menu as a bar across page */
+#menubar > ul > li {
+    display: inline-block;
+    padding: 8px;
+}
+
+
+/* no bullets on menu items */ 
+#menubar ul li {
+    list-style: none;
+    text-indent: 0px;
+}
+/* hide dropdown menus - sublists */
+#menubar ul ul {
+    display: none;
+    position: absolute;
+    background-color: lightgrey;
+    padding: 0px;
+    
+}
+
+
+/* Show dropdown when hovering over its menu */
+#menubar ul li:hover ul,
+#menubar ul li:focus ul,
+#menubar ul li:active ul {
+    display: block;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    min-width: 160px;
+    position: absolute;
+}
+
+
+/* Make menu links look normal */
+#menubar a {
+    display: block;
+    color: black;
+    padding: 8px;
+    text-decoration: none;
+}
+
+
+/* Change the link color on hover */
+#menubar ul ul li a:hover {
+    background-color: grey;
+    color: white;
+}
+

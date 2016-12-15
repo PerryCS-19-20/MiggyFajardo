@@ -9,7 +9,7 @@ function buildMap(sitemapWrapper){
     
     subList.appendChild(item("Breakout", "breakout.html"));
     subList.appendChild(item("Paint Splatter", "paint.html"));
-    subList.appendChild(item("Eureka", "eureka.html"));
+    subList.appendChild(item("Eureka", "popup.html"));
     subList.appendChild(item("Javascript Events", "events.html"));
     subList.appendChild(item("Chalkboard", "chalkboard.html"));
     subList.appendChild(item("To Do List", "todolist.html"));
