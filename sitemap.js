@@ -1,7 +1,9 @@
-function buildMap(sitemapWrapper){
-    var siteMap = document.getElementById(sitemapWrapper);
+function buildMap(sitemapWrapperid){
+    var siteMap = document.getElementById(sitemapWrapperid);
     var list = document.createElement("ul");
     var subList = document.createElement("ul");
+  //  var links = document.creatElement("li");
+  //  links.textContent = "Links";
     list.appendChild(item("Home", "index.html"));
     list.appendChild(item("Gallery", "gallery.html"));
     list.appendChild(item("About", "about.html"));
@@ -16,6 +18,7 @@ function buildMap(sitemapWrapper){
     subList.appendChild(item("Tic-Tac-Toe", "tictactoe.html"));
     subList.appendChild(item("Table", "table.html"));
     subList.appendChild(item("Multiplication Slider", "slider.html"));
+//    links.appendChild(subList);
     list.appendChild(subList);
     siteMap.appendChild(list);
 }

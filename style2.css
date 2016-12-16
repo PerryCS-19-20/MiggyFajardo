@@ -115,7 +115,6 @@ p {
 }
 
 .dropdown-content {
-
     display: none;
     position: absolute;
     background-color: #f9f9f9;
@@ -126,7 +125,7 @@ p {
 
 .dropdown-content a {
     color: black;
-    padding: 12px 16px;
+    padding: 10px 14px;
     text-decoration: none;
     display: block;
 }
