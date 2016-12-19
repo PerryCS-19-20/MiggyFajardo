@@ -44,7 +44,7 @@ body {
 #menubar ul ul {
     display: none;
     position: absolute;
-    background-color: lightgrey;
+    background-color: white;
     padding: 0px;
     
 }
@@ -55,6 +55,8 @@ body {
 #menubar ul li:focus ul,
 #menubar ul li:active ul {
     display: block;
+	margin-top:5px;
+	margin-right: 10px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     min-width: 160px;
     position: absolute;
@@ -72,7 +74,7 @@ body {
 
 /* Change the link color on hover */
 #menubar ul ul li a:hover {
-    background-color: grey;
-    color: white;
+    background-color: #f1f1f1;
+    color: black;
 }
 
