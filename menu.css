@@ -1,5 +1,3 @@
-
-
 body {
     margin: 0;
     background-color: grey;
@@ -16,19 +14,6 @@ body {
     background-color: white;
 }
 
-
-/* class on a list that makes up the menu 
-#menubar > ul {
-    position: relative;
-    display:  inline-block;
-    text-decoration: none;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    font-size: 40px;
-}
-*/
-
 /* top-level menu as a bar across page */
 #menubar > ul > li {
     display: inline-block;
@@ -39,30 +24,28 @@ body {
 /* no bullets on menu items */ 
 #menubar ul li {
     list-style: none;
-    text-align: left  
+    text-align: left;  
+    padding: 6px 74px;
+    color: black;
 }
 /* hide dropdown menus - sublists */
 #menubar ul ul {
     display: none;
     position: absolute;
     background-color: white;
-    padding: 1px;
-    margin: auto;
     
 }
 
 
 /* Show dropdown when hovering over its menu */
-#menubar ul li:hover ul,
-#menubar ul li:focus ul,
-#menubar ul li:active ul {
+#menubar ul li:hover ul {
     display: block;
     margin-top:5px;
     margin-right: 10px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     min-width: 160px;
     position: absolute;
-    
+    margin-bottom: 40px
 }
 
 
@@ -80,6 +63,7 @@ body {
 #menubar ul ul li a:hover {
     background-color: #f1f1f1;
     color: black;
+
 }
 
 /*black background*/
@@ -107,19 +91,17 @@ body {
 .nav {
     margin-top: 22px;
     height: 67px;	
-    background: white;
+    background: black;
 }
 .nav ul {
-    margin: 48px;
-    padding: 0;
+    margin: 35px;
+    padding: 1px;
 
 }
 .nav ul li {
     list-style: none;
 
 }
-
-
 /* Text */
 .headerBreak {
     width: 100%;
@@ -128,6 +110,7 @@ body {
 }
 .nav ul li a:hover {
     background-color: grey;
-    transition-duration: 0.3s;
-    cursor: pointer;
+    transition-duration: 0.50s;
+    cursor: auto;
+
 }
